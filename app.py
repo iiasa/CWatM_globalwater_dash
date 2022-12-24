@@ -471,14 +471,12 @@ app.layout = dbc.Container([
 
         dcc.Tabs([
             dcc.Tab(label='WaterBalance',value='WaterBalance', style=tab_style, selected_style=tab_selected_style, children=[
-
                 dbc.Row(
                     [
                         dbc.Col(slider_dbc,md=7),
                         #dbc.Col(dcc.Markdown("Water Demand Components"),md=4,align="bottom")
                     ],
                     #no_gutters= True
-
                 ),
                 dbc.Row(
                     [
@@ -500,7 +498,6 @@ app.layout = dbc.Container([
             ]),   # end tab 1
 
             dcc.Tab(label='WaterDemand',value='WaterDemand', style=tab_style, selected_style=tab_selected_style, children=[
-
                 dbc.Row(
                     [
                         dbc.Col(slider2_dbc, md=7),
@@ -526,7 +523,7 @@ app.layout = dbc.Container([
 
 
             ]),  # end tab2
-        ],id='WaterTabs',value='WaterTabs'),   # end tabs
+        ],id='WaterTabs',value='WaterBalance'),   # end tabs
         html.Div([jumbotron],className="h-100 p-5 bg-light border rounded-3"),
 ],
     #fluid = True,
