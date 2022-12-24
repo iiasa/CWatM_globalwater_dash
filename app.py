@@ -1157,4 +1157,4 @@ def update_slider(input_value):
 # ---- end of water demand ---------------------------------
 
 if __name__ == "__main__":
-    app.run_server(debug=False)
+    app.run_server(debug=True)
