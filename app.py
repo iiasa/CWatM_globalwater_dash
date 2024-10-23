@@ -115,6 +115,7 @@ GDP p.c. (2010): {} US$\n
 
 infile = open(store_sunburst1, 'rb')
 no_basins, no_years,years, colors,parents,labels,values = pickle.load(infile)
+values = values * 1000.
 infile.close()
 
 # https://developer.mozilla.org/en-US/docs/Web/CSS/color_value
@@ -732,7 +733,7 @@ def display_map(year, sunclick):
         else:
             #zzz.append(-2.)
             zzz.append(0)
-        customdata[basin][8] = "<b>{}</b> <br> in {} <br> {:.2f} km³ <br> {:.2f} % of {}".format(labels[id],year,values[basin,year-yearmin,id],zzz[basin],labels[par[id]])
+        customdata[basin][8] = "<b>{}</b> <br> in {} <br> {:.1f} km³ <br> {:.2f} % of {}".format(labels[id],year,values[basin,year-yearmin,id],zzz[basin],labels[par[id]])
 
   # https://plotly.com/python/builtin-colorscales/
   # fig = go.Figure(go.Choroplethmapbox(name="Global Basins", geojson=global_basins, locations=globalinfo.index, z=zzz,
